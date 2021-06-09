@@ -33,13 +33,52 @@ func main() {
 
 	// Reading and Writing
 	totalSample := map[string]int{}
-	totalSample["Orcas"] = 1
-	totalSample["Lions"] = 2
-	fmt.Println(totalSample["Orcas"])
-	fmt.Println(totalSample["Kittens"]) // 代入されていないため0になる
-	totalSample["Kittens"]++
-	fmt.Println(totalSample["Kittens"])
-	totalSample["Lions"] = 3
-	fmt.Println(totalSample["Lions"])
+	totalSample["Blue"] = 1
+	totalSample["Red"] = 2
+	fmt.Println(totalSample["Blue"]) // 1
+	fmt.Println(totalSample)
+	fmt.Println(totalSample["Green"]) // 代入されていないため0になる
+	totalSample["Green"]++
+	fmt.Println(totalSample["Green"]) // 1
+	totalSample["Red"] = 3
+	fmt.Println(totalSample["Red"]) // 3
+
+	// comma ok idiom
+	m := map[string]int{
+		"blue": 2,
+		"red":  0,
+	}
+	v, ok := m["blue"]
+	fmt.Println(v, ok) // 2 true
+
+	v, ok = m["red"]
+	fmt.Println(v, ok) // 0 true
+
+	v, ok = m["green"]
+	fmt.Println(v, ok) // 0 true
+
+	// Deleting from Maps
+	newMap := map[string]int{
+		"blue": 2,
+		"red":  1,
+	}
+	delete(newMap, "blue")
+	fmt.Println(newMap)     // map[red:1]
+	delete(newMap, "green") // 存在しないキーのため何も起こらない
+	fmt.Println(newMap)     // map[red:1]
+
+	// set in go
+	intSet := map[int]bool{}
+	vals := []int{5, 10, 3, 4, 5, 6, 7, 8}
+	//
+	for _, v := range vals {
+		intSet[v] = true
+	}
+	fmt.Println((len(vals)), len(intSet)) // 8 7
+	fmt.Println(intSet[5])                // true
+	fmt.Println(intSet[500])              // false
+	if intSet[100] {
+		fmt.Println("100がsetの中にある")
+	}
 
 }
