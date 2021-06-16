@@ -125,5 +125,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("%+v\n", fromFile)
+	fmt.Printf("%+v\n", fromFile) // {Name:Fred Age:40}
 }
