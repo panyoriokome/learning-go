@@ -98,6 +98,19 @@ func main() {
 	for _, v := range vals {
 		v *= 2
 	}
-	fmt.Println(vals4)
+	fmt.Println(vals4) // [2 4 6 8 10 12]
 
+	// Labeling
+	sampleData := []string{"hello", "apple_n!"}
+outer:
+	for _, sample := range sampleData {
+		for i, r := range sample {
+			fmt.Println(i, r, string(r))
+			// lが来たらその次の文字をスキップする
+			if r == 'l' {
+				continue outer
+			}
+		}
+		fmt.Println()
+	}
 }
