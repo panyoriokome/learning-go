@@ -16,5 +16,4 @@ func main() {
 	if x == nil {
 		fmt.Println("dataはnil") // 出力されない=xはnilではない
 	}
-
 }
