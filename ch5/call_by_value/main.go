@@ -41,7 +41,7 @@ func main() {
 		2: "second",
 	}
 	modMap(m)
-	fmt.Println(m) // map[2:hello 3:goodbye]
+	fmt.Println(m) // map[2:hello 3:goodbye 4:goodbye]
 
 	// sliceの場合
 	s2 := []int{1, 2, 3}
