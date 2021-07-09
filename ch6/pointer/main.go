@@ -16,15 +16,27 @@ func main() {
 	// fmt.Println(z == nil)
 	// fmt.Println(*z) // panic: runtime error: invalid memory address or nil pointer dereference
 
-	y := 10
-	var pointerToY *int
-	pointerToY = &y
-	fmt.Println(pointerToY)
+	x2 := 15
+	var pointerToX2 *int
+	pointerToX2 = &x2
 
-	// pointer to primitive variables
-	Foo := "Foo"
+	fmt.Println(pointerToX2)  // 0xc000016110
+	fmt.Println(*pointerToX2) // 15
+
 	x2 := &Foo{}
 	var y2 string
 	z2 := &y2
 	fmt.Println(z2)
+
+	// type person struct {
+	// 	FirstName  string
+	// 	MiddleName *string
+	// 	LastName   string
+	// }
+
+	// p := person{
+	// 	FirstName:  "Pat",
+	// 	MiddleName: "Perry",
+	// 	LastName:   "Peterson",
+	// }
 }
