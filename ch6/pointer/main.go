@@ -23,20 +23,20 @@ func main() {
 	fmt.Println(pointerToX2)  // 0xc000016110
 	fmt.Println(*pointerToX2) // 15
 
-	x2 := &Foo{}
-	var y2 string
-	z2 := &y2
-	fmt.Println(z2)
+	// x2 := &Foo{}
+	// var y2 string
+	// z2 := &y2
+	// fmt.Println(z2)
 
-	// type person struct {
-	// 	FirstName  string
-	// 	MiddleName *string
-	// 	LastName   string
-	// }
+	type person struct {
+		FirstName  string
+		MiddleName *string
+		LastName   string
+	}
 
-	// p := person{
-	// 	FirstName:  "Pat",
-	// 	MiddleName: "Perry",
-	// 	LastName:   "Peterson",
-	// }
+	p := person{
+		FirstName:  "Pat",
+		MiddleName: "Perry",
+		LastName:   "Peterson",
+	}
 }
