@@ -13,7 +13,6 @@ func (p Person) String() string {
 }
 
 func main() {
-
 	tom := Person{
 		FirstName: "Tom",
 		LastName:  "Jones",
